@@ -96,7 +96,7 @@ class modsimple extends DolibarrModules
 		
 		$this->module_parts = array(
 			'triggers'=>1
-			,'hooks'=>array('contactcard')
+			,'hooks'=>array('contactcard','thirdpartycard')
 		);
 		
 		//TODO fin de la copie
@@ -153,7 +153,8 @@ class modsimple extends DolibarrModules
 		
 		//TODO à copier dans votre module
         $this->tabs = array(
-			'contact:+tab'.$this->numero.':Title'.$this->numero.':simple@simple::/simple/simple.php?fk_contact=__ID__'		);
+			'contact:+tab'.$this->numero.':Title'.$this->numero.':simple@simple::/simple/simple.php?fk_contact=__ID__'
+		);
 		
 		//TODO fin copie
 
