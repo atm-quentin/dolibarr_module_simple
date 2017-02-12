@@ -68,25 +68,26 @@ class Actionssimple
 
 		if (in_array('contactcard', explode(':', $parameters['context'])))
 		{
-		  
+		 
 		  echo '<tr>
 		  	<td>Hook 208000 (Code Postal)</td><td colspan="'.$parameters['colspan'].'">'.$object->zip.'</td>
 		  </tr>';
 		}
-                if (in_array('thirdpartycard', explode(':', $parameters['context'])))
+        if (in_array('thirdpartycard', explode(':', $parameters['context'])))
 		{
-                  if (!empty($object->zip)&&(!empty($object->capital))){
-                    dol_include_once('/custom/simple/class/grade.class.php');
+		//	$object->fetch_thirdparty();
+         // if (!empty($object->thirdparty->zip)&&(!empty($object->thirdparty->capital))){
+                 dol_include_once('/custom/simple/class/grade.class.php');
                     
 
                     $grade=new Grade;
-                    
+                  
                     echo '<tr>
                           <td>Grade du tiers</td><td colspan="'.$parameters['colspan'].'">'.$grade->getGrade($object->capital, $object->zip).'</td>
                     </tr>';
                   
-                  }
-		} 
+           //       }
+				} 
 
 
 		if (! $error)
