@@ -7,3 +7,7 @@ simpleSetup = Configuration du module simple
 simpleAbout = A propos du module simple
 Title208000 = Module Personnalisé
 GradeReport=Rapport par grade
+titleGraphProjectByTypeSearch=Graphique capitaux grade
+titleGradeReport=Rapport des grades
+titleGraphProjectByType=Graphique representant les grades
+simpleTitleGraphGrade=Rapport des grades

@@ -49,7 +49,7 @@ $TChart[] = array('C',$isC);
 $TChart[] = array('D',$isD);
 $TChart[] = array('E',$isE);
 // Begin of page
-llxHeader('', $langs->trans('mandarinTitleGraphCACumule'), '');
+llxHeader('', $langs->trans('simpleTitleGraphGrade'), '');
 
 $formCore=new TFormCore('auto','form2', 'get');
 
@@ -74,7 +74,7 @@ if(!empty($result)){
 			,array(
 	
 					'liste'=>array(
-							'titre'=>$langs->transnoentitiesnoconv('titleGradeReport'),
+							'titre'=>$langs->transnoentitiesnoconv('titleGradeReport')." $mesGrades[$selectgrade]",
 							'head_search'=>$headsearch
 					)
 					,'title'=>array(
@@ -94,7 +94,7 @@ if(!empty($result)){
 					'type' => 'chart'
 					,'chartType' => 'PieChart'
 					,'liste'=>array(
-							'titre'=>$langs->transnoentitiesnoconv('titleGraphProjectByType')
+							'titre'=>$langs->transnoentitiesnoconv('titleGraphProjectByTypeSearch')." $mesGrades[$selectgrade]"
 					)
 			)
 			);
